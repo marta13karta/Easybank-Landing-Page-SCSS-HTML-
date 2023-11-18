@@ -1,0 +1,35 @@
+@use "../abstracts/index" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  .nav-list {
+    display: none;
+  }
+  .request-btn {
+    display: none;
+  }
+  .modal-wrapper {
+    display: none;
+  }
+  @media (min-width: 1000px) {
+    padding: 30px 170px;
+    .nav-list {
+      width: 33%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      .nav-item {
+        color: $neutral-grayish-blue;
+      }
+    }
+    .request-btn {
+      display: inline;
+    }
+    .burger-btn {
+      display: none;
+    }
+  }
+}

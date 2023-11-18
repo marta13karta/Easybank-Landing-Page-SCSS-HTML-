@@ -1,0 +1,17 @@
+@use "../abstracts/index" as *;
+@use "../base/index" as *;
+
+.request-btn {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 14px;
+  color: $neutral-white;
+  padding: 13px 32px;
+  background: linear-gradient(
+    to right,
+    $primary-lime-green,
+    $primary-bright-cyan
+  );
+  transition: background-color 0.3s ease;
+  border-radius: 1.5rem;
+}
