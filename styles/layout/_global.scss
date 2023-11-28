@@ -13,7 +13,7 @@ body {
       width: 100vw;
       top: -38px;
       left: 0;
-      background: url("/images/bg-intro-mobile.svg") no-repeat;
+      background: url("../images/bg-intro-mobile.svg") no-repeat;
       background-size: contain;
       z-index: 1;
     }
@@ -22,7 +22,7 @@ body {
         position: absolute;
         top: -12%;
         left: 45%;
-        background: url("/images/bg-intro-desktop.svg") no-repeat;
+        background: url("../images/bg-intro-desktop.svg") no-repeat;
       }
     }
   }
