@@ -1,48 +1,70 @@
 @use "../abstracts/index" as *;
 
 .hero {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 50px;
   position: relative;
-  .inner {
-    text-align: center;
-    .title {
-      font-size: 38px;
-      color: $primary-dark-blue;
-      line-height: 1.2;
-      font-weight: 400;
-      margin-bottom: 25px;
+  overflow-y: hidden;
+  background: $neutral-very-light-gray;
+  .container {
+    padding: 20px 20px 4rem 20px;
+    z-index: 2;
+    .inner {
+      text-align: center;
+      .title {
+        font-size: 38px;
+        color: $primary-dark-blue;
+        line-height: 1.2;
+        font-weight: 400;
+        margin-bottom: 1.75rem;
+      }
+      .description {
+        font-size: 15px;
+        color: $neutral-grayish-blue;
+        margin-bottom: 1.75rem;
+      }
     }
-    .description {
-      font-size: 15px;
-      color: $neutral-grayish-blue;
-      margin-bottom: 25px;
+
+    .image-wrapper {
+      .cellphones-mockup {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: -133px;
+        z-index: -1;
+      }
     }
   }
-
-  .image-wrapper {
-    .cellphones-mockup {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      top: -133px;
-    }
-  }
-
-  @media (min-width: 1000px) {
+  @media (min-width: 390px) {
+    height: 90vh;
     flex-direction: row;
-  }
-
-  &::before {
-    content: "";
-    background: $neutral-very-light-gray;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -11;
+    overflow-x: visible;
+    overflow-y: visible;
+    .container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inner {
+        text-align: left;
+        width: 31%;
+        .title {
+          font-size: 54px;
+        }
+        .description {
+          font-size: 18px;
+        }
+      }
+      .image-wrapper {
+        width: 50%;
+        .cellphones-mockup {
+          top: -20%;
+          left: 56%;
+          width: 54%;
+          z-index: 2 !important;
+        }
+      }
+    }
   }
 }

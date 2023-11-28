@@ -1,35 +1,52 @@
 @use "../abstracts/index" as *;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 25px;
-  .nav-list {
-    display: none;
-  }
-  .request-btn {
-    display: none;
-  }
-  .modal-wrapper {
-    display: none;
-  }
-  @media (min-width: 1000px) {
-    padding: 30px 170px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 24px 18px;
     .nav-list {
-      width: 33%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      .nav-item {
-        color: $neutral-grayish-blue;
-      }
+      display: none;
     }
     .request-btn {
-      display: inline;
-    }
-    .burger-btn {
       display: none;
+    }
+    .close-btn {
+      display: none;
+    }
+
+    @media (min-width: 400px) {
+      padding: 0 10rem;
+      .nav-list {
+        display: flex;
+        width: 33%;
+        gap: 2rem;
+        font-size: 14px;
+        .nav-item {
+          color: $neutral-grayish-blue;
+          padding-block: 2rem;
+          border-bottom: 4px solid transparent;
+          &:hover {
+            color: $primary-dark-blue;
+            border-image: linear-gradient(
+              to right,
+              $primary-lime-green,
+              $primary-bright-cyan
+            );
+            border-bottom: 4px solid border-image;
+            border-image-slice: 1;
+            cursor: grab;
+          }
+        }
+      }
+
+      .request-btn {
+        display: inline;
+      }
+      .burger-btn {
+        display: none;
+      }
     }
   }
 }

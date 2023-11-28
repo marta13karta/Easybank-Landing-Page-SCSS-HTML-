@@ -14,4 +14,11 @@
   );
   transition: background-color 0.3s ease;
   border-radius: 1.5rem;
+  &:hover {
+    background: linear-gradient(
+      to right,
+      lighten($primary-lime-green, 30%),
+      lighten($primary-bright-cyan, 30%)
+    );
+  }
 }
